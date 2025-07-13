@@ -4,6 +4,7 @@
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
         
 		home-manager = {
 			url = "github:nix-community/home-manager/";
@@ -16,7 +17,7 @@
 		};
     };
 
-	outputs = { self, nixpkgs, home-manager, zen-browser, ...} @ inputs: 
+	outputs = { self, nixpkgs, nixos-hardware, home-manager, zen-browser, ...} @ inputs: 
 	let
 		inherit (self) outputs;
 		systems = [
@@ -33,7 +34,10 @@
 		nixosConfigurations = {
 			thinkpad = nixpkgs.lib.nixosSystem {
 				specialArgs = { inherit inputs outputs; };
-				modules = [ ./hosts/thinkpad ];
+				modules = [ 
+					./hosts/thinkpad 
+					nixos-hardware.nixosModules.lenovo-thinkpad-p1
+				];
 			};
 		};
 

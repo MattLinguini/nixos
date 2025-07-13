@@ -1,23 +1,24 @@
 {pkgs, ...}: 
 
 {
-    imports = [];
+    imports = [ 
+        ./fish.nix 
+        ./fzf.nix
+    ];
 
     programs.zoxide = {
         enable = true;
-        enableFishIntegration = true;
     };
 
     programs.eza = {
         enable = true;
-        enableFishIntegration = true;
         extraOptions = ["-l" "--icons" "--git" "-a"];
     };
 
-    programs.bat = {enable = true;};
+    programs.bat = { enable = true; };
 
     home.packages = with pkgs; [
-        coreutils
+        uutils-coreutils-noprefix
         fd
         gcc
         btop
@@ -27,5 +28,6 @@
         ripgrep
         tldr
         zip
+        neofetch
     ];
 }

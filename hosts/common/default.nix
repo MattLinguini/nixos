@@ -45,6 +45,7 @@
     home-manager = {
         useUserPackages = true;
         extraSpecialArgs = { inherit inputs outputs; };
+        backupFileExtension = "backup";
     };
 
     users.defaultUserShell = pkgs.fish;

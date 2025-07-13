@@ -5,10 +5,9 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = [
       ./hardware-configuration.nix
-    ];
+  ];
 
   hardware.nvidia.prime = {
       intelBusId = "PCI:0:2:0";
@@ -114,14 +113,7 @@
     git
     kitty
     inputs.zen-browser.packages.${pkgs.system}.default
-    spotify
-    grim
-    slurp
-    wl-clipboard
-    protonvpn-gui
     hyprpolkitagent
-    neovim
-    vscode
   ];
 
   fonts.packages = with pkgs; [

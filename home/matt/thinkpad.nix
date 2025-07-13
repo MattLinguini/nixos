@@ -1,9 +1,13 @@
+# Configuration for the 'matt' user on the 'thinkpad' host.
+
 { config, ... }: 
 
 { 
     imports = [ 
         ./home.nix 
         ../common 
-        ../features/cli
-    ]; 
+        ./cli
+        ./display
+    ];
+
 }
