@@ -4,6 +4,8 @@
     imports = [ 
         ./fish.nix 
         ./fzf.nix
+        ./git.nix
+        ./neovim.nix
     ];
 
     programs.zoxide = {

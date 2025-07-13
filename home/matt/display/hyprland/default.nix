@@ -5,6 +5,8 @@
         
     ];
 
+    programs.hyprpanel = { enable = true; };
+
     home.packages = with pkgs; [
         grim
         hyprlock
