@@ -1,0 +1,86 @@
+{
+  "nodes": {
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1752370912,
+        "narHash": "sha256-2nubM60bAyufUYkHtSxZKOQzvy5H2Q8lTATTptDc+jc=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "908200d6808bf961718ae96c5aad7ae6b0f8bda9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1751637120,
+        "narHash": "sha256-xVNy/XopSfIG9c46nRmPaKfH1Gn/56vQ8++xWA8itO4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5c724ed1388e53cc231ed98330a60eb2f7be4be3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1752162966,
+        "narHash": "sha256-3MxxkU8ZXMHXcbFz7UE4M6qnIPTYGcE/7EMqlZNnVDE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "10e687235226880ed5e9f33f1ffa71fe60f2638a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-stable": "nixpkgs-stable",
+        "zen-browser": "zen-browser"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1751688498,
+        "narHash": "sha256-6kYe6ozYDvsHAxV1zbSxg0oRWF4TzTfOUUJsR6MJlYY=",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
+        "rev": "b5d422dc2b28eb77a21fbdf60aca9a6e63d5a1ab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
