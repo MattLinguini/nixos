@@ -4,10 +4,6 @@
     home.username = lib.mkDefault "matt";
     home.homeDirectory = lib.mkDefault "/home/${config.home.username}"; 
 
-    home.packages = with pkgs; [
-        btop
-    ];
-
     programs.wofi.enable = true;
     programs.vesktop.enable = true;
     programs.librewolf.enable = true;
