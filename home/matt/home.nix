@@ -24,7 +24,7 @@
         enable = true;
         userName = "Matt Bennett";
         userEmail = "matt.bennett715@gmail.com";
-    }
+    };
 
     programs.hyprpanel = {
         enable = true;

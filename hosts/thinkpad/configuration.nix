@@ -15,6 +15,8 @@
       nvidiaBusId = "PCI:1:0:0";
   };
 
+  programs.fish.enable = true;
+
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = true;

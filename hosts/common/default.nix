@@ -1,6 +1,6 @@
 # Defaults for all system configurations
 
-{ lib, inputs, outputs, ... }: 
+{ lib, inputs, outputs, pkgs, ... }: 
 
 {
     imports = [ 
@@ -46,4 +46,6 @@
         useUserPackages = true;
         extraSpecialArgs = { inherit inputs outputs; };
     };
+
+    users.defaultUserShell = pkgs.fish;
 }
