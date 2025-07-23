@@ -2,10 +2,10 @@
 
 {
     imports = [ 
-        ./fish.nix 
-        ./fzf.nix
-        ./git.nix
-        ./neovim.nix
+        ./fish
+        ./fzf
+        ./git
+        ./neovim
         ./protonup.nix
     ];
 

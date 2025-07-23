@@ -1,4 +1,4 @@
-# Configuration for the 'matt' user on the 'thinkpad' host.
+# Configuration for the 'matt' user on the 'thinkpad' machine.
 
 { config, ... }: 
 
@@ -10,5 +10,4 @@
         ./display
         ./gui
     ];
-
 }
