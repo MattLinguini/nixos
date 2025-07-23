@@ -2,7 +2,9 @@
 		imports = [
 			../common 
 			./configuration.nix
-			./hardware
-			./gui
+			./apps
+            ./graphics
+            ./input
+            ./power
 		];
 	}

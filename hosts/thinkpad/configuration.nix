@@ -9,13 +9,7 @@
 
 	services.displayManager.ly.enable = true;
 
-	services.upower.enable = true;
-	services.logind.lidSwitchDocked = "ignore";
-	services.logind.extraConfig = ''
-		IdleAction=suspend
-		IdleActionSec=5min
-		IdleActionIgnoreInhibited=yes
-	'';
+
 
 	services.thinkfan.enable = true;
 	security.polkit.enable = true;
