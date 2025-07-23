@@ -2,6 +2,8 @@
 
 {
     imports = [
-        ./nvidia
+        ./graphics
+        ./power
+        ./input
     ];
 }
