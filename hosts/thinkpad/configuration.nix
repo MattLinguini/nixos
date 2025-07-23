@@ -9,21 +9,39 @@
       ./hardware-configuration.nix
   ];
 
-  hardware.nvidia.prime = {
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
-  };
-
   programs.fish.enable = true;
 
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = true;
+  services.displayManager.ly.enable = true;
+
   services.upower.enable = true;
+  services.logind.lidSwitchDocked = "ignore";
+  services.logind.extraConfig = ''
+    IdleAction=suspend
+    IdleActionSec=5min
+    IdleActionIgnoreInhibited=yes
+  '';
+
   services.thinkfan.enable = true;
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.hyprland.enableGnomeKeyring = true;
+
+services.tor = {
+  enable = true;
+  openFirewall = true;
+  relay = {
+    enable = true;
+    role = "relay";
+  };
+  settings = {
+    ContactInfo = "toradmin@example.org";
+    Nickname = "toradmin";
+    ORPort = 9001;
+    ControlPort = 9051;
+    BandWidthRate = "1 MBytes";
+  };
+};
+
 
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
@@ -114,6 +132,11 @@
     kitty
     inputs.zen-browser.packages.${pkgs.system}.default
     hyprpolkitagent
+    vlc
+    libvlc
+    ly
+    tor-browser
+    modrinth-app
   ];
 
   fonts.packages = with pkgs; [
@@ -121,6 +144,13 @@
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
     nerd-fonts.iosevka
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    font-awesome
+    material-design-icons
+    liberation_ttf
+    corefonts
   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -147,6 +177,7 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+
   system.stateVersion = "25.05"; # Did you read the comment?
 
 }

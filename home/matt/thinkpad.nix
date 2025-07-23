@@ -8,6 +8,7 @@
         ../common 
         ./cli
         ./display
+        ./gui
     ];
 
 }

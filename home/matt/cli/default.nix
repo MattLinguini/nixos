@@ -6,6 +6,7 @@
         ./fzf.nix
         ./git.nix
         ./neovim.nix
+        ./protonup.nix
     ];
 
     programs.zoxide = {
