@@ -1,9 +1,21 @@
 {pkgs, ...}: 
 
 {
-    imports = [ 
-        
+    imports = [
+        ./binds.nix
+        ./env.nix
+        ./exec.nix
+        ./input.nix
+        ./monitors.nix
+        ./rules.nix
+        # ./style.nix
+        ./workspaces.nix
     ];
+
+    wayland.windowManager.hyprland = {
+        enable = true;
+    };
+
 
     programs.hyprpanel = { enable = true; };
 

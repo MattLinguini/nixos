@@ -1,10 +1,10 @@
- 	{
-		imports = [
-			../common 
-			./configuration.nix
-			./apps
-            ./graphics
-            ./input
-            ./power
-		];
-	}
+{
+    imports = [
+        ../common 
+        ./thinkpad.nix
+        ./apps
+        ./graphics
+        ./input
+        ./power
+    ];
+}
