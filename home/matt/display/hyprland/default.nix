@@ -8,7 +8,7 @@
         ./input.nix
         ./monitors.nix
         ./rules.nix
-        # ./style.nix
+        ./style.nix
         ./workspaces.nix
     ];
 
