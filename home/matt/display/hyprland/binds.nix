@@ -19,6 +19,11 @@
                 # Open Applications
                 "SUPER, Q, exec, kitty"
                 "SUPER, R, exec, wofi --show drun"
+
+                # Screenshot
+                "SUPER, Print, exec, grim -o \"$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')\""
+                "SUPER SHIFT, Print, exec, grim -g \"$(slurp)\""
+                "SUPER CONTROL, Print, exec, grim -g \"$(slurp)\" - | wl-copy"
             ] ++ (
                 # Workspace Binds
                 builtins.concatLists (builtins.genList (i:
