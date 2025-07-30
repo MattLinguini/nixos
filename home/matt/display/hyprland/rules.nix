@@ -18,7 +18,6 @@
 
                 # Discord
                 "workspace 5,class:^vesktop$"
-                "opacity 0.9,class:^vesktop$"
                 "float, title:^(Discord Popout)$"
                 "size 800 450, title:^(Discord Popout)$"
                 "pin, title:^(Discord Popout)$"
@@ -27,8 +26,7 @@
                 "workspace 5,class:^Spotify$"
 
                 # VSCode
-                "workspace 2,class:^code$"
-                "opacity 0.9,class:^code$"
+                "workspace 2,class:^Code$"
 
                 # Lutris
                 "workspace 6,class:^net.lutris.Lutris$"
@@ -47,12 +45,15 @@
                 "monitor 2,class:^steam_app_\d+$"
                 "workspace 10,class:^steam_app_\d+$"
 
+                "float,class:^deadlock.exe$"
+                "workspace 9,class:^deadlock.exe$"
+                "size 1920 1080, class:^deadlock.exe$"
+
 
                 # Kitty
                 "float,class:^kitty$"
                 "size 950 580, class:^kitty$"
                 "move 33 59, class:^kitty$"
-                "opacity 0.9,class:^code$"
             ];
 	    };
     };

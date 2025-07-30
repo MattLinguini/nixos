@@ -6,5 +6,6 @@
         ./graphics
         ./input
         ./power
+        ./fans
     ];
 }

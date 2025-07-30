@@ -12,7 +12,11 @@
         ./workspaces.nix
     ];
 
-    wayland.windowManager.hyprland = { enable = true; };
+    wayland.windowManager.hyprland = { 
+        enable = true;
+        xwayland = { enable = true; }; 
+    };
+    
     programs.hyprpanel = { enable = true; };
 
     home.packages = with pkgs; [

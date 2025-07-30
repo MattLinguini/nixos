@@ -5,5 +5,7 @@
         ./hyprland
         ./wofi
         ./gtk
+        ./hyprpaper
+        ./quickshell
     ];
 }
