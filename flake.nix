@@ -15,9 +15,14 @@
 			url = "github:youwen5/zen-browser-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+        cursor = {
+            url = "github:omarcresp/cursor-flake/main";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-	outputs = { self, nixpkgs, nixos-hardware, home-manager, zen-browser, ...} @ inputs: 
+	outputs = { self, nixpkgs, nixos-hardware, home-manager, zen-browser, cursor, ...} @ inputs: 
 	let
 		inherit (self) outputs;
 		systems = [

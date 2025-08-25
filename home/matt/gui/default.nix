@@ -8,7 +8,7 @@
     programs.vscode.enable = true;
 
     home.packages = with pkgs; [
-        logseq
         modrinth-app
+        texlive.combined.scheme-full
     ];
 }

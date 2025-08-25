@@ -41,17 +41,12 @@
 
 	services.displayManager.ly.enable = true;
 
-
 	security.polkit.enable = true;
 	services.gnome.gnome-keyring.enable = true;
 	security.pam.services.hyprland.enableGnomeKeyring = true;
 
 	services.blueman.enable = true;
 	hardware.bluetooth.enable = true;
-
-	networking.hostName = "thinkpad";
-	networking.networkmanager.enable = true;
-
 
 	programs.hyprland = {
 		enable = true;
@@ -74,11 +69,17 @@
 		git
 		kitty
 		inputs.zen-browser.packages.${pkgs.system}.default
+        inputs.cursor.packages.${pkgs.system}.default
 		hyprpolkitagent
 		vlc
 		libvlc
 		ly
 		tor-browser
+        github-cli
+        wireguard-tools 
+        protonvpn-gui
+        networkmanagerapplet
+        (python3.withPackages (p: [ p.numpy p.requests p.dbus-python p.pygobject3 ]))
 	];
 
 	fonts.packages = with pkgs; [
@@ -94,5 +95,6 @@
 		liberation_ttf
 		corefonts
 	];
-}
 
+    programs.thunar.enable = true;
+}

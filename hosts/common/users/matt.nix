@@ -7,6 +7,7 @@
         extraGroups = [
             "wheel"
             "networkmanager"
+            "libvirtd"
         ];
         packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
     };

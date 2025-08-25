@@ -7,5 +7,7 @@
         ./input
         ./power
         ./fans
+        #./vm
+        ./networking
     ];
 }

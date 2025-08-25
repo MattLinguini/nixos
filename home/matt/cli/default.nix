@@ -31,5 +31,7 @@
         tldr
         zip
         neofetch
+        unzip
+        unrar-free
     ];
 }

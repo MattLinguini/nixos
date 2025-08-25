@@ -13,6 +13,8 @@
         "nvidia_drm"
     ];
 
+    boot.blacklistedKernelModules = ["nouveau"];
+
     hardware = {
         graphics = {
             enable = true;

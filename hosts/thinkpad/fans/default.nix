@@ -2,7 +2,7 @@
 
 {
     services.thinkfan = {
-        enable = true;
+        enable = false;
 
         levels = [
             [ 0 0 55 ]   # Fan off between 0°C and 55°C

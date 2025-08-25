@@ -45,9 +45,9 @@
                 "monitor 2,class:^steam_app_\d+$"
                 "workspace 10,class:^steam_app_\d+$"
 
-                "float,class:^deadlock.exe$"
-                "workspace 9,class:^deadlock.exe$"
-                "size 1920 1080, class:^deadlock.exe$"
+                "float,class:^Deadlock.exe$"
+                "workspace 9,class:^Deadlock.exe$"
+                "size 1920 1080, class:^Deadlock.exe$"
 
 
                 # Kitty

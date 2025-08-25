@@ -9,5 +9,6 @@
         ./cli
         ./display
         ./gui
+        ./apps
     ];
 }
